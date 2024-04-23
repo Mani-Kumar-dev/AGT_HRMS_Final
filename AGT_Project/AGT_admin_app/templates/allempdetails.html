@@ -65,7 +65,7 @@
           <a href="{% url 'edit_emp' employee.Emp_Id %}" data-bs-toggle="tooltip" data-bs-placement="top" title="Update"><i class="fa-solid fa-pen icon_view"></i></a>
           <a href="{% url 'Emp_info' employee.Emp_Id %}" data-bs-toggle="tooltip" data-bs-placement="top" title="View"><i class="fa-solid fa-eye icon_view"></i></a>
           <a href="{% url 'confirm_delete' employee.Emp_Id %}" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><i class="fa-solid fa-trash icon_view"></i></a>
-          <a href="{% url 'createPayslips' employee.Emp_Id %}" data-bs-toggle="tooltip" data-bs-placement="top" title="Add Payslips"><i class="fa-solid fa-file-circle-plus icon_view"></i></a>
+          <a href="{% url 'allpdfs' employee.Emp_Id%}" data-bs-toggle="tooltip" data-bs-placement="top" title="Add Payslips"><i class="fa-solid fa-file-circle-plus icon_view"></i></a>
         </td>
       </tr>
       {% endfor %}

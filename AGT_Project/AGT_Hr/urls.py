@@ -11,6 +11,7 @@ urlpatterns = [
    path('accept_leave/<slug:leaves_id>/',views.accept_leave_request,name="accept_leave"),
    path('reject_leave/<slug:leaves_id>/',views.reject_leave_request,name="reject_leave"),
    path('createPayslips/<slug:Emp_Id>',views.create_Payslips,name="createPayslips"),
+   path('allpdfs/<slug:Emp_Id>/',views.allpdfs,name="allpdfs"),
    
    
 ]
