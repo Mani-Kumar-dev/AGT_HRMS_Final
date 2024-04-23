@@ -227,3 +227,13 @@ def create_Payslips(request,Emp_Id):
             return redirect("/AddEmps")
     else:
          return render(request,'login.html')
+    
+def allpdfs(request,Emp_Id):
+    if request.user.is_authenticated:
+        current_user=request.user
+        emps=Employee_detail.objects.get(Email=current_user.email)
+        employee=Employee_detail.objects.get(Emp_Id=Emp_Id)
+        context={"emps":emps,"emp":emps,"employee":employee}
+        return render(request,"allpdfs.html",context)
+    else:
+         return render(request,'login.html')
